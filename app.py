@@ -88,7 +88,7 @@ def temperatures():
     temperatureList = list(np.ravel(results))
 
     #convert to a json and display
-    return jsonify(TemperatureList)
+    return jsonify(temperatureList)
 
 # /api/v1.0/start/end and /api/v1.0/start routes
 @app.route("/api/v1.0/<start>")
@@ -138,5 +138,5 @@ def dateStats(start=None, end=None):
 
 
 ## app launcher
-if __name__ == '__main__'
+if __name__ == '__main__':
     app.run(debug=True)
